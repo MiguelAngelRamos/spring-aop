@@ -23,7 +23,6 @@ public class UserController {
 
   @PostMapping
   public ResponseEntity<User> createUser(@RequestBody User user) {
-    ResponseEntity.created(null)
     return ResponseEntity.ok(userService.addUser(user));
   }
 
